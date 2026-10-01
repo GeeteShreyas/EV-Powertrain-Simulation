@@ -52,6 +52,7 @@ Battery power is calculated using drivetrain efficiency during traction and rege
 ## Key Findings
 
 - Higher vehicle mass increases acceleration energy demand.
-- Aerodynamic drag becomes more important at higher speeds.
-- Rolling resistance affects energy use throughout the driving cycle.
-- Regenerative braking recovers part of the vehicle’s kinetic energy during deceleration.
+- Mass have larger sensitivity as it effects both Acceleration and Rolling resistance.
+- Most of the Energy Consumption in used for Acceleration.
+- Regenerative Braking recovered meaningful amount of energy.
+
