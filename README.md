@@ -23,4 +23,35 @@ It also investigates how changes in vehicle mass, aerodynamic drag coefficient, 
 - Total energy consumption
 - Sensitivity analysis for mass, drag coefficient, and rolling resistance
 
-#
+## Model Assumptions
+
+- The vehicle follows the WLTC Class 3 speed profile exactly.
+- Road gradient is assumed to be zero (flat road).
+- Air density is assumed constant.
+- Drivetrain efficiency is constant during traction.
+- Regenerative braking is applied during negative wheel-power demand.
+- Auxiliary loads such as HVAC, lights, and infotainment are not included.
+- Battery voltage and internal resistance effects are not modeled.
+
+
+## Governing Equations
+
+The total tractive force is calculated as:
+
+Ftotal = Frolling + Faerodynamic + Facceleration
+
+Where:
+
+- Rolling resistance: `Frolling = m × g × Crr`
+- Aerodynamic drag: `Faerodynamic = 0.5 × ρ × Cd × A × v²`
+- Acceleration force: `Facceleration = m × a`
+- Wheel power: `Pwheel = Ftotal × v`
+
+Battery power is calculated using drivetrain efficiency during traction and regenerative efficiency during braking.
+
+## Key Findings
+
+- Higher vehicle mass increases acceleration energy demand.
+- Aerodynamic drag becomes more important at higher speeds.
+- Rolling resistance affects energy use throughout the driving cycle.
+- Regenerative braking recovers part of the vehicle’s kinetic energy during deceleration.
